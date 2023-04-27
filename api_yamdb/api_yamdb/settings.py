@@ -4,7 +4,7 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = "p&l%385148kslhtyn^##a1)ilz@4zqj=rq&agdol^##zgl9(vs"
+SECRET_KEY = os.getenv("SECRET_KEY", default="p&l%385148kslhtyn^##a1)ilz@4zqj=rq&agdol^##zgl9(vs")
 
 DEBUG = True
 
@@ -66,7 +66,7 @@ DATABASES = {
         'ENGINE': os.getenv("DB_ENGINE", default="django.db.backends.postgresql"),
         'NAME': os.getenv("DB_NAME", default="postgres"),
         'USER': os.getenv("POSTGRES_USER", default="postgres"),
-        'PASSWORD': os.getenv("POSTGRES_PASSWORD", default="postgres"),
+        'PASSWORD': os.getenv("POSTGRES_PASSWORD", default="password321Q!"),
         'HOST': os.getenv("DB_HOST", default="db"),
         'PORT': os.getenv("DB_PORT", default="5432")
     }

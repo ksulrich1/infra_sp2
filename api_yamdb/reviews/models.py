@@ -148,7 +148,7 @@ class Review(models.Model):
         ]
 
     def __str__(self):
-        return self.title
+        return f'Рецензия {self.author.username} на {self.title.name}'
 
 
 class Comment(models.Model):
